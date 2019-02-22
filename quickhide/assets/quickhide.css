@@ -1,0 +1,39 @@
+.wp-quickhide {
+    border:1px solid black;
+    border-radius:0 0 8px 8px;
+    bottom:0;
+    display:none;
+    font-family:sans-serif;
+    font-size:small;
+    padding:8px 12px;
+    position:fixed;
+    right:-1px;
+    transform:rotate(90deg);
+    transform-origin:right top;
+    z-index:3000;
+}
+
+.wp-quickhide:hover {
+    background-color:#eeeeee;
+    cursor:pointer;
+}
+
+.wp-quickhide-overlay {
+    background-color:#ffffff;
+    background-attachment:fixed;
+    background-position:center center;
+    background-repeat:no-repeat;
+    bottom:0;
+    display:none;
+    left:0;
+    position:fixed;
+    right:0;
+    top:0;
+    z-index:3001;
+}
+
+@media screen and (min-width:720px) {
+    .wp-quickhide {
+        display:block;
+    }
+}
