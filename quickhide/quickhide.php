@@ -14,6 +14,6 @@
 add_action('wp_enqueue_scripts', 'quickhide_enqueue_scripts');
 function quickhide_enqueue_scripts() {
     wp_enqueue_script('quickhide', plugin_dir_url( __FILE__ ).'assets/quickhide.js', array('jquery'));
-    wp_localize_script('quickhide', 'quickhide', array('assetURL' => plugin_dir_url( __FILE__ ).'assets/'));
+    wp_localize_script('quickhide', 'quickhide', array('assetURL' => plugin_dir_url( __FILE__ ).'assets/','lang' => substr(get_locale(),0,2)));
     wp_enqueue_style('quickhide', plugin_dir_url( __FILE__ ).'assets/quickhide.css', false);
 }
